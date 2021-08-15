@@ -14,7 +14,6 @@ const CharacterProfile = () => {
     const fetchCharacter = async () => {
       const result = await axios(`https://www.breakingbadapi.com/api/characters/${id}`)
       setInfo(result.data)
-      console.log(result.data);
       setIsLoading(false)
     }
     fetchCharacter()
