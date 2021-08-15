@@ -3,6 +3,7 @@ import axios from "axios";
 import "./app.css";
 import Header from "./Components/Header";
 import CharacterGrid from "./Components/Characters/CharacterGrid";
+import SearchBar from "./Components/SearchBar";
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
   return (
     <div className="container">
       <Header/>
+      <SearchBar/>
       <CharacterGrid items={items} isLoading={isLoading} />
     </div>
   );
