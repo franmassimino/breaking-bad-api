@@ -7,7 +7,7 @@ const ProfileInfo = ({info, isLoading}) => {
         <div className='profile-card'>
             <img className='profile-img' src={char.img} alt={char.name} />
             <h1>{char.name}</h1>
-            <p>"{char.nickname}"</p>
+            <p className='nickname'>"{char.nickname}"</p>
             <p>Status: {char.status}</p>
             <p>Occupation: {char.occupation[0]}</p>
         </div>

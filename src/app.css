@@ -170,6 +170,12 @@
     font-size: 16px;
   }
 
+  .profile-card .nickname{
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
   .profile-img{
     width: 90%;
     margin-bottom: 10px;
