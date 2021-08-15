@@ -9,23 +9,23 @@ const App = () => {
 
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-
-  const fetchItems = async () => {
-    const result = await axios(`https://www.breakingbadapi.com/api/characters`)
-    setItems(result.data)
-    console.log(result.data);
-    setIsLoading(false)
-  }
-
+  const [query, setQuery] = useState([])
+  
   useEffect(() => {
+    const fetchItems = async () => {
+      const result = await axios(`https://www.breakingbadapi.com/api/characters?name=${query}`)
+      setItems(result.data)
+      console.log(result.data);
+      setIsLoading(false)
+    }
     fetchItems()
-  }, [])
+  }, [query])
 
 
   return (
     <div className="container">
       <Header/>
-      <SearchBar/>
+      <SearchBar query={query} getQuery={(q) => setQuery(q)} />
       <CharacterGrid items={items} isLoading={isLoading} />
     </div>
   );
