@@ -12,8 +12,8 @@ const CharacterProfile = () => {
   
   useEffect(() => {
     const fetchCharacter = async () => {
-      const result = await axios(`https://www.breakingbadapi.com/api/characters/${id}`)
-      setInfo(result.data)
+      const {data} = await axios(`https://www.breakingbadapi.com/api/characters/${id}`)
+      setInfo(data)
       setIsLoading(false)
     }
     fetchCharacter()

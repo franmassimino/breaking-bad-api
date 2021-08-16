@@ -11,9 +11,8 @@ const HomePage = () => {
   
   useEffect(() => {
     const fetchItems = async () => {
-      const result = await axios(`https://www.breakingbadapi.com/api/characters?name=${query}`)
-      setItems(result.data)
-      console.log(result.data);
+      const {data} = await axios(`https://www.breakingbadapi.com/api/characters?name=${query}`)
+      setItems(data)
       setIsLoading(false)
     }
     fetchItems()
