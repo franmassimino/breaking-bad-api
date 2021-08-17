@@ -22,7 +22,7 @@ const CharacterProfile = () => {
 
   return (
     <div className="container">
-      <Header/>
+      <Header/> 
       <ProfileInfo info={info} isLoading={isLoading} />
     </div>
   );
